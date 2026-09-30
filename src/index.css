@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Alex+Brush&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-cream: #F9F6F0;
+  --color-brand-beige: #E8E2D5;
+  --color-brand-black: #830404;
+  --color-brand-gold: #C5A000;
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-script: 'Alex Brush', cursive;
+}
+
+body {
+  background-color: var(--color-brand-cream);
+  color: var(--color-brand-black);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+.neon-glow {
+  text-shadow: 0 0 5px rgba(255, 230, 150, 0.8), 
+               0 0 10px rgba(255, 200, 100, 0.8), 
+               0 0 20px rgba(255, 170, 50, 0.6), 
+               0 0 30px rgba(255, 150, 0, 0.4);
+  color: #fff9e6;
+}
+
+/* Custom Scrollbar for a luxurious feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-cream); 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-beige); 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-gold); 
+}
+
+/* Magic UI Kinetic Text Animation */
+.kinetic-char {
+  display: inline-block;
+  will-change: font-weight, -webkit-text-stroke-width, padding;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: var(--text-stroke-width, calc(1em * 125 / 6000));
+  transition: font-weight 0.4s ease, -webkit-text-stroke-color 0.4s ease, padding 0.4s ease;
+  cursor: default;
+}
+
+.kinetic-char:hover {
+  padding-inline: var(--hover-padding, calc(1em / 14));
+  font-weight: 900 !important;
+  -webkit-text-stroke-color: currentColor;
+  -webkit-text-stroke-width: calc(var(--text-stroke-width, calc(1em * 125 / 6000)) * 2);
+}
+
+.kinetic-char:has(+ span:hover) {
+  padding-inline: var(--hover-padding, calc(1em / 14));
+  font-weight: 700;
+}
+
+.kinetic-char:has(+ span + span:hover) {
+  font-weight: 500;
+}
+
+.kinetic-char:hover + .kinetic-char {
+  padding-inline: var(--hover-padding, calc(1em / 14));
+  font-weight: 700;
+}
+
+.kinetic-char:hover + span + .kinetic-char {
+  font-weight: 500;
+}

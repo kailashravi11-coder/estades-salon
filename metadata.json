@@ -1,0 +1,6 @@
+{
+  "name": "Estades Salon | Premier Hair & Beauty Salon in Brownwood, TX",
+  "description": "Experience world-class hair, nails, massage, and beauty services at Estades Salon in Brownwood, TX. A premium, women-owned salon offering elite styling.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
